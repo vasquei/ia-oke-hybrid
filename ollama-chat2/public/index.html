@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ollama Chat</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Ollama Chat</h1>
+      <p>Node.js frontend connected only to Ollama</p>
+    </header>
+
+    <section class="toolbar">
+      <label for="modelSelect">Model</label>
+      <select id="modelSelect">
+        <option value="">Loading models...</option>
+      </select>
+      <button id="reloadModelsBtn" type="button">Reload models</button>
+    </section>
+
+    <main id="chatBox" class="chat-box">
+      <div class="message bot">
+        Hello. Select a model and start chatting.
+      </div>
+    </main>
+
+    <form id="chatForm" class="chat-form">
+      <textarea
+        id="promptInput"
+        placeholder="Write your message..."
+        rows="3"
+      ></textarea>
+      <button id="sendBtn" type="submit">Send</button>
+    </form>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

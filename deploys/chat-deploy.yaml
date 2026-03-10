@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ollama-chat
+  namespace: itti
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ollama-chat
+  template:
+    metadata:
+      labels:
+        app: ollama-chat
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: name
+                operator: In
+                values:
+                - poolvirtual
+      tolerations:
+        - key: "virtual-kubelet.io/provider"
+          operator: "Exists"
+      containers:
+        - name: chat
+          image: gru.ocir.io/gry3ikxpsjou/repo/ollama-chat:latest
+          ports:
+            - containerPort: 3000
+
+

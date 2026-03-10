@@ -1,0 +1,13 @@
+{
+  "name": "ollama-chat",
+  "version": "1.0.0",
+  "description": "Simple Node.js chat UI for Ollama",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1"
+  }
+}

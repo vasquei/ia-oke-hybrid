@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ollama-chat
+  namespace: itti
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-subnet1: "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaxj67gbckazcjn2ye7kvhaxru6aj5ajfxvmjgudlhm6bwxhwe4cja"
+spec:
+  type: LoadBalancer
+  selector:
+    app: ollama-chat
+  ports:
+    - port: 3000 
+      targetPort: 3000
