@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: pvc-ollama
-  namespace: ollama
+  namespace: itti 
 spec:
   storageClassName: "sc-ollama"
   accessModes:
