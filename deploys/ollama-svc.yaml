@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: svc-ollama 
   namespace: itti
-  annotations:
+    #  annotations:
           # service.beta.kubernetes.io/oci-load-balancer-subnet1: "ocid1.subnet.oc1.iad.aaaaaaaay2wal32cabbsnl2kahdhcsqdqsgae4bb3xvbufpwrdfiicvkvtyq"
-    service.beta.kubernetes.io/oci-load-balancer-internal: "true"       
-    service.beta.kubernetes.io/oci-load-balancer-subnet1: "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaafjshmrl3pgrxhpt2aw2y2w4welikavscstzsbf7m4phnoscptuza"
+          # service.beta.kubernetes.io/oci-load-balancer-internal: "true"       
+          #service.beta.kubernetes.io/oci-load-balancer-subnet1: "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaagvtjjgrfdmdf63a5cbopxxwdrudhvp7vwhuzbvhe5pybsjne4mwa"
 spec:
   selector:
     app: ollama 
@@ -14,4 +14,4 @@ spec:
     - protocol: TCP
       port: 11434
       targetPort: 11434
-  type: LoadBalancer 
+  type: ClusterIP  
