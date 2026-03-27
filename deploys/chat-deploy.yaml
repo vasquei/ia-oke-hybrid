@@ -27,7 +27,7 @@ spec:
           operator: "Exists"
       containers:
         - name: chat
-          image: gru.ocir.io/gry3ikxpsjou/repo/ollama-chat:latest
+          image: ord.ocir.io/ax0yupcusky2/repo/ollama-chat:latest
           ports:
             - containerPort: 3000
 
