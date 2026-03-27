@@ -31,7 +31,7 @@ spec:
           effect: "NoSchedule" 
       containers:
       - name: ollama
-        image: gru.ocir.io/gry3ikxpsjou/repo/ollama:latest
+        image: ord.ocir.io/ax0yupcusky2/repo/ollama:latest
         ports:
         - containerPort: 11434
         volumeMounts:
