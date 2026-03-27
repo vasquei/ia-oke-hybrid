@@ -4,7 +4,7 @@ metadata:
   name: ollama-chat
   namespace: itti
   annotations:
-    service.beta.kubernetes.io/oci-load-balancer-subnet1: "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaadze3ufuyqmnlfyhlljsbzdc52k7lgludxfgc32dnquaulxpdcpa"
+    service.beta.kubernetes.io/oci-load-balancer-subnet1: "ocid1.subnet.oc1.us-chicago-1.aaaaaaaarwhvwkr5mvxpmvmgn4bdlvu3jhzmfcpxuy3rhccxoriee6nilvca"
 spec:
   type: LoadBalancer
   selector:
