@@ -50,8 +50,7 @@ spec:
             ollama pull gpt-oss:20b
             echo "All models are ready. Keeping Ollama running..."
             tail -f /dev/null
-      imagePullSecrets:
-      - name: ocir
+
       
   volumeClaimTemplates:
   - metadata:
